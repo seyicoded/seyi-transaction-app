@@ -12,6 +12,8 @@ import Toast from 'react-native-toast-message'
 import Onboarding from '../screens/guest/onboarding/Onboarding';
 import { getSeenOnBoarind, getSignedInUserFromStorage } from '../store/local/storage';
 import { BottomStack } from './BottomStack';
+import TransactionHistory from '../screens/auth/Others/TransactionHistory';
+import FundTransfer from '../screens/auth/Others/FundTransfer';
 
 const screen = Dimensions.get("screen")
 
@@ -86,9 +88,11 @@ export default function MainStack() {
 
           {/* authenticated only */}
           <Stack.Screen name={route.MAIN_HOME} component={BottomStack} />
+          <Stack.Screen name={route.TRANSACTION_HISTORY} component={TransactionHistory} />
+          <Stack.Screen name={route.FUND_TRANSFER} component={FundTransfer} />
         </Stack.Navigator>
       </NavigationContainer>
-      <Toast visibilityTime={4000} topOffset={60} />
+      <Toast visibilityTime={4000} />
     </View>
   )
 }
