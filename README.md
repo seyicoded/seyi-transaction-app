@@ -28,7 +28,7 @@
 ![](https://github.com/seyicoded/seyi-transaction-app/blob/main/snapshot/s8.jpg?raw=true)
 
 
-video url: 
+demo video url: 
 ---
 
 **setup**
