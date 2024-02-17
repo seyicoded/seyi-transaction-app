@@ -94,7 +94,7 @@ const TransactionHistory = (props: Props) => {
                                 descriptionStyle={{ fontSize: 11, marginTop: 3 }}
                                 description={moment(item.date).calendar()}
                                 // left={props => <List.Icon {...props} icon="folder" />}
-                                left={props => <Avatar.Text  label='SE' />}
+                                left={props => <Avatar.Text size={54} label='SE' />}
                                 right={props => <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                                     <Text style={{ color: item.type == 'credit' ? 'green' : 'red', fontSize: 11, fontWeight: '700' }}>{`${item.type == 'credit' ? '+' : '-'}${item.amount.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}</Text>
                                 </View>}
