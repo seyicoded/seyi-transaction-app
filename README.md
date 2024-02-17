@@ -29,6 +29,14 @@
 
 
 demo video url:  https://drive.google.com/file/d/1xnL9DC7UMG0k6T7gBg0PKjSUb-_zHBUZ/view?usp=drive_link
+
+
+login information:
+
+you can utilize social sign in to login or use
+
+email: opadonuseyi01@gmail.com
+password: Password123$
 ---
 
 **setup**
