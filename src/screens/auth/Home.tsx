@@ -43,8 +43,8 @@ const Home = ({navigation}: Props) => {
                 </View>
             </Card>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 20 }}>
-                <Button mode='outlined' onPress={()=> navigation.navigate(route.FUND_TRANSFER)}>Fund Transfer</Button>
-                <Button mode='outlined' onPress={()=> navigation.navigate(route.TRANSACTION_HISTORY)}>Billing History</Button>
+                <Button labelStyle={{ color: 'rgba(255, 255, 255, 0.8)' }} mode='outlined' onPress={()=> navigation.navigate(route.FUND_TRANSFER)}>Fund Transfer</Button>
+                <Button labelStyle={{ color: 'rgba(255, 255, 255, 0.8)' }} mode='outlined' onPress={()=> navigation.navigate(route.TRANSACTION_HISTORY)}>Billing History</Button>
             </View>
         </View>
     </View>

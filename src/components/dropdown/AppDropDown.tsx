@@ -7,7 +7,7 @@ import { Color } from '../../constants/color/color';
 
 type Props = {
     list: any[],
-    value: string,
+    value: string | any,
     setValue: any,
     showDropDown: boolean,
     setShowDropDown: any,
