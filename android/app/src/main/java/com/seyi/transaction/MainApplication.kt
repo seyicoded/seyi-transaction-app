@@ -1,4 +1,4 @@
-package com.transaction
+package com.seyi.transaction
 
 import android.app.Application
 import com.facebook.react.PackageList

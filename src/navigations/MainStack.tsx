@@ -10,6 +10,8 @@ import { ActivityIndicator } from 'react-native-paper';
 import { Color } from '../constants/color/color';
 import Toast from 'react-native-toast-message'
 import Onboarding from '../screens/guest/onboarding/Onboarding';
+import { getSeenOnBoarind, getSignedInUserFromStorage } from '../store/local/storage';
+import BottomStack from './BottomStack';
 
 const screen = Dimensions.get("screen")
 
@@ -24,8 +26,26 @@ export default function MainStack() {
 
   useEffect(()=>{
     // load something
+    (async()=>{
 
-    setPreLoader(false);
+      const seenOnboarding = await getSeenOnBoarind();
+    
+      if(!seenOnboarding){
+        setDefaultRoute(route.ONBOARDING);
+      }else{
+        // check if login
+        const _user = await getSignedInUserFromStorage();
+
+        if(_user.status){
+          setDefaultRoute(route.MAIN_HOME);
+        }else{
+          setDefaultRoute(route.SIGNIN);
+        }
+      }
+
+      setPreLoader(false);
+    })()
+
   }, [])
 
   if(preLoader){
@@ -63,6 +83,9 @@ export default function MainStack() {
           {/* guest route only */}
           <Stack.Screen name={route.ONBOARDING} component={Onboarding} />
           <Stack.Screen name={route.SIGNIN} component={SignIn} />
+
+          {/* authenticated only */}
+          <Stack.Screen name={route.MAIN_HOME} component={BottomStack} />
         </Stack.Navigator>
       </NavigationContainer>
       <Toast visibilityTime={4000} topOffset={60} />

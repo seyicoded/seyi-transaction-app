@@ -5,6 +5,7 @@ import { Button, Card, Text } from 'react-native-paper'
 import { Image } from 'react-native-animatable'
 import { NavigationProp } from '@react-navigation/native'
 import ROUTE from '../../../constants/route/route'
+import { setSeenOnBoarind } from '../../../store/local/storage'
 
 type Props = {
     navigation: NavigationProp<any>
@@ -17,7 +18,14 @@ const Onboarding = ({navigation}: Props) => {
     const scrollRef: any = useRef(null);
 
     const skip = ()=>{
-        navigation.navigate(ROUTE.SIGNIN)
+        // navigation.navigate(ROUTE.SIGNIN)
+
+        setSeenOnBoarind("yes");
+
+        navigation.reset({
+            index: 0,
+            routes: [{name: ROUTE.SIGNIN}]
+        })
     }
 
     const next = ()=>{

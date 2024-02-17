@@ -52,42 +52,17 @@ export const getAppleDetail = async ()=>{
 }
 
 
-export const setRememberEmail = async (data: any)=>{
+export const setSeenOnBoarind = async (data: any)=>{
     // Alert.alert(data);
     await AsyncStorage.setItem(STORAGE.REMEMBER_EMAIL, data);
     // Alert.alert(data);
 }
 
-export const getRememberEmail = async ()=>{
+export const getSeenOnBoarind = async ()=>{
     // await AsyncStorage.setItem(STORAGE.REMEMBER_EMAIL, "opadonuseyi01@gmail.com");
     const data: any = await AsyncStorage.getItem(STORAGE.REMEMBER_EMAIL);
     // Alert.alert(data);
     return (data);
 }
 
-export const setAuctionLStorage = async (data: any)=>{
-    // Alert.alert(data);
-    await AsyncStorage.setItem(STORAGE.AUCTION, JSON.stringify(data));
-    // Alert.alert(data);
-}
-
-export const getAuctionLStorage = async ()=>{
-    // await AsyncStorage.setItem(STORAGE.REMEMBER_EMAIL, "opadonuseyi01@gmail.com");
-    const data: any = await AsyncStorage.getItem(STORAGE.AUCTION);
-    // Alert.alert(data);
-    return (data);
-}
-
-export const setCategoryLStorage = async (data: any)=>{
-    // Alert.alert(data);
-    await AsyncStorage.setItem(STORAGE.CATEGORY, JSON.stringify(data));
-    // Alert.alert(data);
-}
-
-export const getCategoryLStorage = async ()=>{
-    // await AsyncStorage.setItem(STORAGE.REMEMBER_EMAIL, "opadonuseyi01@gmail.com");
-    const data: any = await AsyncStorage.getItem(STORAGE.CATEGORY);
-    // Alert.alert(data);
-    return (data);
-}
 
