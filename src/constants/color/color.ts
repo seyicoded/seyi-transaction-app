@@ -1,6 +1,8 @@
 export const Color = {
     PRIMARY: '#2C14DD',
     PRIMARY_LIGHT: 'rgba(103, 158, 127, 1)',
+    // PRIMARY_BG: '#978AF4',
+    PRIMARY_BG: '#2812C9',
     TEXT_P1: '#240F51',
     BLACK: "#000",
     NOTE_BLACK_PRIMARY: "rgba(32, 33, 35, 1)",

@@ -11,7 +11,7 @@ import { Color } from '../constants/color/color';
 import Toast from 'react-native-toast-message'
 import Onboarding from '../screens/guest/onboarding/Onboarding';
 import { getSeenOnBoarind, getSignedInUserFromStorage } from '../store/local/storage';
-import BottomStack from './BottomStack';
+import { BottomStack } from './BottomStack';
 
 const screen = Dimensions.get("screen")
 

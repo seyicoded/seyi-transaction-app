@@ -10,6 +10,7 @@ import { validateAccount } from '../../../config/db';
 import { object, string, number, date, InferType } from 'yup';
 import ROUTE from '../../../constants/route/route';
 import { NavigationProp } from '@react-navigation/native';
+import { setSignedInUserFromStorage } from '../../../store/local/storage';
 
 type Props = {
     navigation: NavigationProp<any>
@@ -23,6 +24,7 @@ const Signin = ({navigation}: Props) => {
     });
 
     const proceedToUser = ()=>{
+        setSignedInUserFromStorage({});
         navigation.reset({
             index: 0,
             routes: [{name: ROUTE.MAIN_HOME}]

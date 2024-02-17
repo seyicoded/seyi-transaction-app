@@ -13,7 +13,7 @@ export default function SplashScreen() {
     <View style={styles.container}>
         <StatusBar backgroundColor={Color.PRIMARY} />
         <Animatable.Image style={styles.floating} source={require("../../assets/resources/splashC.png")} />    
-        <Animatable.Text style={styles.title} animation={"fadeIn"} duration={2800}>Seyi-TFX</Animatable.Text>
+        <Animatable.Text style={styles.title} delay={500} animation={"zoomInDown"} duration={2800}>Seyi-TFX</Animatable.Text>
         <Animatable.Text style={styles.text} animation={"fadeIn"} delay={3000} duration={2800}>Global transaction solution</Animatable.Text>
     </View>
   )
