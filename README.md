@@ -37,11 +37,14 @@ you can utilize social sign in to login or use
 
 email: opadonuseyi01@gmail.com
 password: Password123$
+
+
+AES cryption utilized
 ---
 
 **setup**
 
-to utilize simple install
+to run simple install
 
 ```diff
 npm install
